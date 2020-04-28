@@ -30,6 +30,8 @@ RUN pecl install libsodium-2.0.21
 
 RUN docker-php-ext-install bcmath
 
+RUN docker-php-ext-install soap
+
 # Set the memory limit to unlimited for expensive Composer interactions
 RUN echo "memory_limit=-1" > /usr/local/etc/php/conf.d/memory.ini
 
